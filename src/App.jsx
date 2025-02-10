@@ -3,6 +3,7 @@ function App() {
   return (
     <>
       <div className="mt-40">
+        {/* -------------------------- component for rich text editor --------------------------  */}
         <Tiptap />
       </div>
     </>

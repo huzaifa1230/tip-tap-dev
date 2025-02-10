@@ -34,3 +34,32 @@
 .ProseMirror li {
   margin: 0.3rem 0;
 }
+
+.output-preview h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.output-preview h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.output-preview h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.output-preview ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.output-preview ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.output-preview li {
+  margin-bottom: 0.5rem;
+}

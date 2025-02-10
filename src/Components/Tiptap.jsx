@@ -9,6 +9,7 @@ const Tiptap = () => {
   const savedContent = localStorage.getItem("editorContent");
 
   const editor = useEditor({
+    // --------------------------  Extensions and Starter Kit --------------------------
     extensions: [
       StarterKit.configure({
         heading: false,
@@ -29,13 +30,14 @@ const Tiptap = () => {
       localStorage.setItem("editorContent", JSON.stringify(editor.getJSON()));
     },
   });
-
+  // ------------------------------------- check to ensure editor exists before rendering -------------------------------------
   if (!editor) return null;
 
   return (
     <>
       <div className="flex justify-center">
         <div className="border rounded-lg p-4   max-w-2xl">
+          {/* ------------------------------------- Tollbar buttons-------------------------------------  */}
           <div className="flex gap-2 mb-4 flex-wrap">
             <button
               onClick={() => editor.chain().focus().toggleBold().run()}
@@ -129,14 +131,15 @@ const Tiptap = () => {
               Highlight
             </button>
           </div>
+          {/* ------------------------------------- The main text editor area -------------------------------------  */}
           <EditorContent
             editor={editor}
             className="min-h-[200px] outline-none ProseMirror"
           />
         </div>
       </div>
-
-      <div className="mt-6 p-4">
+      {/* ------------------------------------- to display the content -------------------------------------  */}
+      <div className="mt-6 p-4 output-preview">
         <h1 className="text-lg font-semibold">Output Preview</h1>
         <div
           className="mt-2 p-2  bg-white"

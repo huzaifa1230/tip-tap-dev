@@ -134,7 +134,7 @@ const Tiptap = () => {
           {/* ------------------------------------- The main text editor area -------------------------------------  */}
           <EditorContent
             editor={editor}
-            className="min-h-[200px] outline-none ProseMirror"
+            className="min-h-[200px] max-h-96 overflow-y-scroll outline-none ProseMirror "
           />
         </div>
       </div>
